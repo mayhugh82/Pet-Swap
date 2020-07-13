@@ -1,0 +1,299 @@
+body, html {
+    font-family: 'Cuprum';
+    font-size: 18px;
+    line-height: 34px;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+   scroll-behavior: smooth; 
+ 
+}
+
+
+p {
+   color: rgb(9, 9, 77);
+
+}
+/* Header and Nav Bar  */
+.nav-container {
+    width: auto;
+    max-width: 1140px;
+    margin: 0 auto;
+    clear: both;
+}
+
+#masthead {
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    top: 0;
+    margin: 0 0 30px;
+    padding-left: 15px;
+    /* padding-right: 15px; */
+    overflow: auto;
+    background-color: white;
+}
+
+  #logo {
+    float: left;
+    /* width: 250px; */
+    height: 90px;
+    font-family: 'Carter One'; 
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 90px;
+    color: rgb(9, 9, 77);
+    text-align: center;
+    text-decoration: none;
+    /* background-color: indigo */
+
+}
+
+#logo:hover{
+    color:rgb(110, 108, 107)
+}
+  
+nav {
+    float: right;
+    margin-top: 25px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+  
+nav a {
+    display: inline-block;
+    padding-left: 15px;
+    margin-left: 15px;
+    line-height: 18px;
+    color: rgb(9, 9, 77);
+    text-decoration: none;
+    /* border-left: 1px solid #efefef; */
+    font-family: 'Cuprum'; 
+    font-size: 16px;  
+}
+
+
+a{
+  color: rgb(9, 9, 77);
+}
+
+a:hover {
+    color: rgb(110, 108, 107)
+}
+
+/* Hero Image & Text */
+
+/* Intro  */          
+.container-intro{
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    padding: auto;
+    display: flex;
+    justify-content: center;
+}
+h1{
+    font-size: 20px;
+}
+
+h2{
+    font-size: 55px;
+    font-family: 'Carter One';
+}
+
+h3{
+    font-size: 30px;
+padding-top: 40px;
+font-family: 'Cuprum';
+}
+
+.hero-image {
+    background-image: linear-gradient(rgba(245, 241, 241, 0.5), rgba(250, 248, 248, 0.5)), url("../assets/images/hero-image.jpg") ;
+    
+    height: 100%;
+    width: 100%;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;    
+    margin: auto;
+    object-fit: cover;
+    overflow: hidden;
+    
+} 
+
+/* Place text in the middle of the image */
+.hero-text {
+    text-align: center;
+    position: absolute; 
+    top: 10%;
+    color: rgb(9, 9, 77);
+ 
+    max-width: 60%;
+    height: 150px;
+} 
+
+/* Buttons  */
+.intro-buttons{
+    padding-top: 50px;
+}
+
+.btn{
+    background-color: rgb(9, 9, 77);
+    color: white;
+    font-family: 'Cuprum';
+
+}
+
+.btn:hover{
+    background-color:rgb(110, 108, 107);
+    border: 0px none;
+    color: white;
+}
+
+/* About  */
+h4{
+    font-size: 30px;
+    font-family: 'Carter One';
+    color: rgb(9, 9, 77);
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+
+.container-about{
+    width: 100%;
+    text-align: center;
+    /* margin: auto; */
+    /* padding: auto; */
+    display: flex;
+    justify-content: center;
+    padding-top:50px;
+    padding-bottom: 50px;
+    margin-left: 25px;
+    margin-right: 25px;
+    /* padding-left: 15px;
+    padding-right: 15px; */
+}
+
+h5{
+    font-size: 30px;
+    font-family: 'Carter One';
+    color: rgb(9, 9, 77);
+    text-align: left;
+    margin-left: 20px;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+#about-text{
+    margin-left: 20px;
+}
+
+.paw{
+    max-width: 30%;
+    max-height: 30%;
+    padding-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Footer  */
+footer {
+    background-color: white;
+    bottom: 0;
+    width: 100%;
+    max-height: 50px; 
+    text-align: center;
+    color: rgb(9, 9, 77);
+    font-family: 'Antic Didone';
+    font-size: 10px;
+    padding: 5px;
+    margin-bottom: 0;
+    padding: 30px 0;
+    clear: both;
+} 
+
+
+
+
+@media screen and (min-width: 300px) and (max-width: 980px){
+
+    /* Hamburger Nav  */
+  
+  .topnav {
+    overflow: auto;
+    background-color: white;
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    
+    
+  }
+  
+  /* Hide the links inside the navigation menu (except for logo/home) */
+  .topnav #myLinks {
+    display: none;
+  }
+  
+  /* Style navigation menu links */
+  .topnav a {
+    color: rgb(75, 73, 73);
+    font-family: 'Antic Didone'; 
+      font-size: 16px;
+    padding: 10px 16px;
+    display: block;
+  }
+  
+  /* Style the hamburger menu */
+  .topnav a.icon {
+    background: #efefef;
+    color: rgb(110, 108, 107);
+   padding-top: 20px;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  
+  .topnav a:hover {
+    background-color: #efefef;
+    color: rgb(110, 108, 107);
+  }
+  
+  /* Style the active link (or home/logo) */
+  .active {
+    background-color: #efefef;
+    color: white;
+  }
+  
+  
+  /* Header and Nav Bar  */
+  .nav-container{
+  }
+  
+  #masthead{
+    display: none;
+  }
+  
+  
+  
+  
+  #logo{
+   width: 100%;
+    text-align: left;     
+    background-color: #efefef;  
+  }
+   
+  #logo.active{
+    padding-top: 5px;
+   
+  }
+}

@@ -11,6 +11,39 @@ body, html {
  
 }
 
+h1{
+    font-size: 55px;
+    font-family: 'Carter One';
+}
+
+h2{
+    font-size: 30px;
+font-family: 'Cuprum';
+}
+
+h3{
+    font-size: 20px;
+}
+
+h4{
+    font-size: 30px;
+    font-family: 'Carter One';
+    color: rgb(9, 9, 77);
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+h5{
+    font-size: 30px;
+    font-family: 'Carter One';
+    color: rgb(9, 9, 77);
+    text-align: left;
+    margin-left: 20px;
+    margin-right: auto;
+    margin-top: 10px;
+}
 
 p {
    color: rgb(9, 9, 77);
@@ -94,19 +127,9 @@ a:hover {
     display: flex;
     justify-content: center;
 }
-h1{
-    font-size: 20px;
-}
 
-h2{
-    font-size: 55px;
-    font-family: 'Carter One';
-}
-
-h3{
-    font-size: 30px;
-padding-top: 40px;
-font-family: 'Cuprum';
+.intro{
+    padding-top: 40px;
 }
 
 .hero-image {
@@ -156,15 +179,6 @@ font-family: 'Cuprum';
 }
 
 /* About  */
-h4{
-    font-size: 30px;
-    font-family: 'Carter One';
-    color: rgb(9, 9, 77);
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 10px;
-}
 
 
 .container-about{
@@ -182,16 +196,6 @@ h4{
     padding-right: 15px; */
 }
 
-h5{
-    font-size: 30px;
-    font-family: 'Carter One';
-    color: rgb(9, 9, 77);
-    text-align: left;
-    margin-left: 20px;
-    margin-right: auto;
-    margin-top: 10px;
-}
-
 #about-text{
     margin-left: 20px;
 }
@@ -204,6 +208,63 @@ h5{
     margin-right: auto;
 }
 
+/* Survey  */
+
+.hero-image-survey{
+    
+        background-image: linear-gradient(rgba(245, 241, 241, 0.5), rgba(250, 248, 248, 0.5)), url("../assets/images/owner-survey.jpg") ;
+        height: 40%;
+        width: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        display: flex;
+        justify-content: center;    
+        margin: auto;
+        object-fit: cover;
+        overflow: hidden;
+        
+    } 
+
+.survey{
+    background-color: rgb(9, 9, 77);
+    max-width: 70%;
+    margin-top: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.survey-box{
+    background-color: white;
+    /* margin-top: 150px; */
+    margin-left: 50px;
+    margin-right: 50px;
+    padding-left: 50px;
+    padding-top: 50px;    
+    padding-bottom: 50px; 
+  
+}
+
+#paw-prints{
+    max-height: 100px;
+    /* margin-top: 50px; */
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    
+    
+   
+}
+.form-control{
+    width: 80%;
+    margin-bottom: 30px;
+}
+
+.btn{
+    max-width: 20%;
+}
 
 /* Footer  */
 footer {

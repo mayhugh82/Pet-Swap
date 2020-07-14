@@ -53,7 +53,8 @@
 
 
     <!-- Hero Image and Nav Bar  -->
-    <div class="hero-image">
+    <div class="hero-image-survey">
+
         <header id="masthead">
             <div class="nav-container">
                 <a href="https://dananobile.github.io/Portfolio/" id="logo">Home</a>
@@ -73,37 +74,25 @@
 
                 <div class="row">
                     <div class="col-md-12">
-                        <h1>Welcome to</h1>
+                        <h3>Start Below</h3>
+
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col-md-12">
-                        <h2>Pet PAWtners </h2>
+                        <h1>Pet Owner Questionnaire</h1>
+
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col-md-12">
-                        <h3>Join our
-                            network of dog-lovers that connects pet owners and sitters in your community.</h3>
+                        <h2>Tell us more about your pet by completing the form. <br>We'll use this info to connect your
+                            pup
+                            with the perfect sitter!</h2>
                     </div>
                 </div>
-                <div class="intro-buttons">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <a href="" target="_blank" class="btn">I'm a Pet
-                                Owner</a>
-                        </div>
-                        <div class="col-md-6">
-                            <a href="" target="_blank" class="btn">I'm a Pet
-                                Sitter</a>
-                        </div>
-
-                    </div>
-                </div>
-
-
             </div>
         </div>
     </div>
@@ -113,156 +102,155 @@
 
     </a>
 
-
-    <div class="container">
-
-        <h2>Pet Owner Questions</h2>
+    <hr>
+    <div class="container survey">
+        <img src="../assets/images/horizontal-prints.png" id="paw-prints" alt="paw-print">
         <hr>
+        <div class="survey-box">
+            <h3>Name (Required):</h3>
+            <input type="text" id="name" class="form-control" required>
 
-        <h3><strong>About You</strong></h3>
-        <h4>Name (Required)</h4>
-        <input type="text" id="name" class="form-control" required>
-
-        <h4>Link to a Photo Image of your Dog (Required)</h4>
-        <input type="text" id="photo" class="form-control" required>
-
-        <hr>
-
-        <h3><strong>Question 1</strong></h3>
-        <h4>Confirm you are a dog owner.</h4>
-        <select class="chosen-select" id="q1">
-            <option value="">Select</option>
-            <option value="1">I'm a Dog Owner!</option>
-        </select>
-
-        <h3><strong>Question 2</strong></h3>
-        <h4>Enter your City and State:</h4>
-
-
-        <label for="city">City:</label>
-        <input type="text" id="city" name="city"><br><br>
-        <label for="state">State (Example: NY):</label>
-        <!-- <input type="text" id="state" name="state" maxlength="2"> -->
-        <select class="chosen-select" id="state">
-            <option value="AL"> AL </option>
-            <option value="AK"> AK </option>
-            <option value="AS"> AS </option>
-            <option value="AZ"> AZ </option>
-            <option value="AR"> AR </option>
-            <option value="CA"> CA </option>
-            <option value="CO"> CO </option>
-            <option value="CT"> CT </option>
-            <option value="DE"> DE </option>
-            <option value="DC"> DC </option>
-            <option value="FL"> FL </option>
-            <option value="GA"> GA </option>
-            <option value="GU"> GU </option>
-            <option value="HI"> HI </option>
-            <option value="ID"> ID </option>
-            <option value="IL"> IL </option>
-            <option value="IN"> IN </option>
-            <option value="IA"> IA </option>
-            <option value="KS"> KS </option>
-            <option value="KY"> KY </option>
-            <option value="LA"> LA </option>
-            <option value="ME"> ME </option>
-            <option value="MD"> MD </option>
-            <option value="MA"> MA </option>
-            <option value="MI"> MI </option>
-            <option value="MN"> MN </option>
-            <option value="MS"> MS </option>
-            <option value="MO"> MO </option>
-            <option value="MT"> MT </option>
-            <option value="NE"> NE </option>
-            <option value="NV"> NV </option>
-            <option value="NH"> NH </option>
-            <option value="NJ"> NJ </option>
-            <option value="NM"> NM </option>
-            <option value="NY"> NY </option>
-            <option value="NC"> NC </option>
-            <option value="ND"> ND </option>
-            <option value="MP"> MP </option>
-            <option value="OH"> OH </option>
-            <option value="OK"> OK </option>
-            <option value="OR"> OR </option>
-            <option value="PA"> PA </option>
-            <option value="PR"> PR </option>
-            <option value="RI"> RI </option>
-            <option value="SC"> SC </option>
-            <option value="SD"> SD </option>
-            <option value="TN"> TN </option>
-            <option value="TX"> TX </option>
-            <option value="UT"> UT </option>
-            <option value="VT"> VT </option>
-            <option value="VA"> VA </option>
-            <option value="VI"> VI </option>
-            <option value="WA"> WA </option>
-            <option value="WV"> WV</option>
-            <option value="	WI	"> WI </option>
-            <option value="	WY	"> WY </option>
-        </select>
-
-
-        <h3><strong>Question 3</strong></h3>
-        <h4>Email</h4>
-        <label for="city">Email:</label>
-        <input type="email" id="email" name="email"><br><br>
+            <h3>Link to a Photo Image of your Dog (Required):</h3>
+            <input type="text" id="photo" class="form-control" required>
 
 
 
-        <h3><strong>Question 4</strong></h3>
-        <h4>How long will you need a sitter?</h4>
-        <select class="chosen-select" id="q4">
-            <option value="">Select</option>
-            <option value="1">1 Day</option>
-            <option value="2">1-5 Days</option>
-            <option value="3">More than 5 Days</option>
-        </select>
+            <!-- Question 1 -->
+            <h3>Confirm you are a dog owner:</h3>
+            <select class="chosen-select form-control" id="q1">
+                <option value="">Select</option>
+                <option value="1">I'm a Dog Owner!</option>
+            </select>
+
+            <!-- Question 2 -->
+            <h3>City:</h3>
 
 
-        <h3><strong>Question 5</strong></h3>
-        <h4>How Many Dogs?</h4>
-        <select class="chosen-select" id="q5">
-            <option value=""></option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-        </select>
+            <!-- <label for="city">City:</label> -->
+            <input type="text" id="city" class="form-control" name="city">
+            <!-- <label for="state">State (Example: NY):</label> -->
+            <!-- <input type="text" id="state" name="state" maxlength="2"> -->
+
+            <h3>State:</h3>
+            <select class="chosen-select form-control" id="state">
+                <option value=""> Select </option>
+                <option value="AL"> AL </option>
+                <option value="AK"> AK </option>
+                <option value="AS"> AS </option>
+                <option value="AZ"> AZ </option>
+                <option value="AR"> AR </option>
+                <option value="CA"> CA </option>
+                <option value="CO"> CO </option>
+                <option value="CT"> CT </option>
+                <option value="DE"> DE </option>
+                <option value="DC"> DC </option>
+                <option value="FL"> FL </option>
+                <option value="GA"> GA </option>
+                <option value="GU"> GU </option>
+                <option value="HI"> HI </option>
+                <option value="ID"> ID </option>
+                <option value="IL"> IL </option>
+                <option value="IN"> IN </option>
+                <option value="IA"> IA </option>
+                <option value="KS"> KS </option>
+                <option value="KY"> KY </option>
+                <option value="LA"> LA </option>
+                <option value="ME"> ME </option>
+                <option value="MD"> MD </option>
+                <option value="MA"> MA </option>
+                <option value="MI"> MI </option>
+                <option value="MN"> MN </option>
+                <option value="MS"> MS </option>
+                <option value="MO"> MO </option>
+                <option value="MT"> MT </option>
+                <option value="NE"> NE </option>
+                <option value="NV"> NV </option>
+                <option value="NH"> NH </option>
+                <option value="NJ"> NJ </option>
+                <option value="NM"> NM </option>
+                <option value="NY"> NY </option>
+                <option value="NC"> NC </option>
+                <option value="ND"> ND </option>
+                <option value="MP"> MP </option>
+                <option value="OH"> OH </option>
+                <option value="OK"> OK </option>
+                <option value="OR"> OR </option>
+                <option value="PA"> PA </option>
+                <option value="PR"> PR </option>
+                <option value="RI"> RI </option>
+                <option value="SC"> SC </option>
+                <option value="SD"> SD </option>
+                <option value="TN"> TN </option>
+                <option value="TX"> TX </option>
+                <option value="UT"> UT </option>
+                <option value="VT"> VT </option>
+                <option value="VA"> VA </option>
+                <option value="VI"> VI </option>
+                <option value="WA"> WA </option>
+                <option value="WV"> WV</option>
+                <option value="	WI	"> WI </option>
+                <option value="	WY	"> WY </option>
+            </select>
 
 
-        <h3><strong>Question 6</strong></h3>
-        <h4>What is your dog's size?</h4>
-        <select class="chosen-select" id="q6">
-            <option value=""></option>
-            <option value="1">Small (Under 20 lbs)</option>
-            <option value="2">Medium (Under 50 lbs)</option>
-            <option value="3">Large (over 50lbs)
-            </option>
-        </select>
+            <!-- Question 3 -->
+            <h3>Email:</h3>
+            <!-- <label for="city">Email:</label> -->
+            <input type="email" id="email" name="email" class="form-control">
 
 
-        <h3><strong>Question 7</strong></h3>
-        <h4>What kind of temperment does your dog have?</h4>
-        <select class="chosen-select" id="q7">
-            <option value=""></option>
-            <option value="1">Playful & Active</option>
-            <option value="2">Calm & Lazy</option>
-            <option value="3">Timid & Shy</option>
 
-        </select>
-
-
-        <br>
-        <br>
-
-        <!-- Submit Button -->
-        <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit"><i class="fa fa-check-circle"
-                aria-hidden="true"></i>
-            Submit</button>
-
-        <hr>
+            <!-- Question 4 -->
+            <h3>How long will you need a sitter?</h3>
+            <select class="chosen-select form-control" id="q4">
+                <option value="">Select</option>
+                <option value="1">1 Day</option>
+                <option value="2">1-5 Days</option>
+                <option value="3">More than 5 Days</option>
+            </select>
 
 
+            <!-- Question 5 -->
+            <h3>How Many Dogs?</h3>
+            <select class="chosen-select form-control" id="q5">
+                <option value="">Select</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+
+
+            <!-- Question 6 -->
+            <h3>What is your dog's size?</h3>
+            <select class="chosen-select form-control" id="q6">
+                <option value="">Select</option>
+                <option value="1">Small (Under 20 lbs)</option>
+                <option value="2">Medium (Under 50 lbs)</option>
+                <option value="3">Large (over 50lbs)
+                </option>
+            </select>
+
+
+            <!-- Question 7 -->
+            <h3>What kind of temperment does your dog have?</h3>
+            <select class="chosen-select form-control id=" q7">
+                <option value="">Select</option>
+                <option value="1">Playful & Active</option>
+                <option value="2">Calm & Lazy</option>
+                <option value="3">Timid & Shy</option>
+
+            </select>
+
+
+            <br>
+            <br>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit"><i class="fa fa-check-circle"
+                    aria-hidden="true"></i>
+                Submit</button>
+            <hr>
+        </div>
     </div>
 
     <!-- Modal -->

@@ -169,8 +169,10 @@ a:hover {
     background-color: rgb(9, 9, 77);
     color: white;
     font-family: 'Cuprum';
-
 }
+
+
+
 
 .btn:hover{
     background-color:rgb(110, 108, 107);
@@ -179,6 +181,7 @@ a:hover {
 }
 
 /* About  */
+
 
 
 .container-about{
@@ -213,7 +216,8 @@ a:hover {
 .hero-image-survey{
     
         background-image: linear-gradient(rgba(245, 241, 241, 0.5), rgba(250, 248, 248, 0.5)), url("../assets/images/owner-survey.jpg") ;
-        height: 40%;
+       min-height: 40%;
+
         width: 100%;
         background-position: center;
         background-repeat: no-repeat;
@@ -229,7 +233,8 @@ a:hover {
 
 .survey{
     background-color: rgb(9, 9, 77);
-    max-width: 70%;
+    min-width: 70%;
+
     margin-top: 50px;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -252,19 +257,14 @@ a:hover {
     margin-left: auto;
     margin-right: auto;
     display: flex;
-    justify-content: center;
-    
-    
-   
+    justify-content: center;  
 }
+
 .form-control{
     width: 80%;
     margin-bottom: 30px;
 }
 
-.btn{
-    max-width: 20%;
-}
 
 /* Footer  */
 footer {
@@ -295,8 +295,7 @@ footer {
     position: fixed;
     z-index: 99;
     width: 100%;
-    
-    
+
   }
   
   /* Hide the links inside the navigation menu (except for logo/home) */
@@ -308,7 +307,7 @@ footer {
   .topnav a {
     color: rgb(75, 73, 73);
     font-family: 'Antic Didone'; 
-      font-size: 16px;
+    font-size: 16px;
     padding: 10px 16px;
     display: block;
   }
@@ -317,7 +316,8 @@ footer {
   .topnav a.icon {
     background: #efefef;
     color: rgb(110, 108, 107);
-   padding-top: 20px;
+    padding-top: 20px;
+
     display: block;
     position: absolute;
     right: 0;
@@ -344,17 +344,70 @@ footer {
     display: none;
   }
   
-  
-  
-  
   #logo{
-   width: 100%;
+    width: 100%;
+
     text-align: left;     
     background-color: #efefef;  
   }
    
   #logo.active{
     padding-top: 5px;
-   
   }
+
+/* Homepage  */
+.hero-text{
+    margin-top: 50px;
+}
+
+.btn{
+    margin-bottom: 25px; 
+}
+
+.container-about{
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+#about-text{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+h5{
+    text-align: center;
+}
+
+img{
+   width: 100%;
+}
+
+/* Question Pages  */
+
+.hero-image-survey{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px; 
+    margin-bottom: 50px;
+    height: 80%
+  
+}
+
+.survey{
+    width: 100%;
+}
+
+.survey-box{
+    /* padding-left: 10px; */
+    margin-left: 15px;
+    margin-right: 15px;
+    padding-right: 10px;
+}
+
 }

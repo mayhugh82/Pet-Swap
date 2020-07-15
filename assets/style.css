@@ -133,7 +133,7 @@ a:hover {
 }
 
 .hero-image {
-    background-image: linear-gradient(rgba(245, 241, 241, 0.5), rgba(250, 248, 248, 0.5)), url("../assets/images/hero-image.jpg") ;
+    background-image: linear-gradient(rgba(245, 241, 241, 0.5), rgba(250, 248, 248, 0.5)), url("./images/hero-image.jpg") ;
     
     height: 100%;
     width: 100%;

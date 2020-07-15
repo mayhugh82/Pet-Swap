@@ -20,6 +20,7 @@ var PORT = process.env.PORT || 8080;
 // The code below is pretty standard.
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use('/', express.static('public'));
 
 // ================================================================================
 // ROUTER

@@ -27,8 +27,7 @@ app.use('/assets', express.static('assets'));
 // The below points our server to a series of "route" files.
 // These routes give our server a "map" of how to respond when users visit or request data from various URLs.
 // ================================================================================
-
-//YOU WILL NEED TO OPEN THIS!//require("./routes/apiRoutes")(app);
+require("./routes/apiRoutes")(app);
 require("./routes/htmlRoutes")(app);
 
 // ==============================================================================

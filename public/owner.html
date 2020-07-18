@@ -400,8 +400,8 @@
 
 
             <!-- Question 7 -->
-            <h3>What kind of temperment does your dog have?</h3>
-            <select class="chosen-select form-control " id=" q7">
+            <h3>What kind of temperament does your dog have?</h3>
+            <select class="chosen-select form-control" id="q7">
                 <option value="">Select</option>
                 <option value="1">Playful & Active</option>
                 <option value="2">Calm & Lazy</option>
@@ -450,7 +450,7 @@
 
         </div>
     </div>
-
+    <!--Connect API route to page-->
     <script type="text/javascript">
         // Chosen CSS
         var config = {
@@ -501,29 +501,45 @@
                 var userData = {
                     name: $("#name").val(),
                     photo: $("#photo").val(),
-                    scores: [
-                        $("#q1").val(),
-                        $("#city").val(),
-                        $("#state").val(),
-                        $("#email").val(),
-                        $("#q4").val(),
-                        $("#q5").val(),
-                        $("#q6").val(),
-                        $("#q7").val(),
-                        $("#q8").val(),
-                        $("#q9").val(),
-                        $("#q10").val()
-                    ]
+                    city: $("#city").val(),
+                    state: $("#state").val(),
+                    email: $("#email").val(),
+                    duration: $("#q4").val(),
+                    quantity: $("#q5").val(),
+                    size: $("#q6").val(),
+                    temperament: $("#q7").val(),
                 };
 
                 // AJAX post the data to the owner API.
                 $.post("/api/owner", userData, function (data) {
 
-                    // Grab the result from the AJAX post so that the best match's name and photo are displayed.
-                    $("#match-name").text(data.name);
-                    $("#match-email").text(data.email);
-                    $("#match-img").attr("src", data.photo);
+                    // Grab the result from the AJAX post to display the list of possible matches.
+                   
+                    // First create a un ordered list element which we use to display the result in.
+                    const list = HTMLUListElement = document.createElement('ul');
 
+                    //loop through the results
+                    for (let i = 0; i < array.length; i++) {
+
+                        // grab a sitter element by index from the results array
+                        const sitter = array[i];    
+                        // creates an "LI" element to put sitter inside
+                        const li = HTMLLIElement = document.createElement('li');
+                            //create the name, email, and image tags to put inside the li for each sitter we get back
+                            li.innerHTML = `<h2 id="match-name-${i}">${sitter.name}</h2>` +
+                                `<h2 id="match-email-${i}">${sitter.email}</h2>` +
+                                `<img id="match-img-${i}" src="${sitter.photo}" alt=""><br />`;
+                            
+                            //insert the list item into the list ul to build the list of sitters to display in the 
+                            //modal
+                            list.insertAdjacentElement('beforeend', li);
+                        
+                    }
+                    //Clear out the modal body to get ready for the next list.
+                    let modalBody = HTMLDivElement =  $('.modal-body');
+                    modalBody.innerHTML = "";
+                    //Add the list of sitters to the modal body
+                    modalBody.insertAdjacentElement('afterbegin', list);
                     // Show the modal with the best match
                     $("#results-modal").modal("toggle");
 
@@ -533,13 +549,6 @@
             }
         });
     </script>
-
-
-
-
-
-
-
 
     <footer>
         <p>Copyright @Pet PAWtners 2020</p>

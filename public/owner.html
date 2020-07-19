@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Boostrap  -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <!-- Jquery  -->
-    <script src="https://code.jquery.com/jquery-3.5.0.min.js"
-        integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+    
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    
     <!-- Google font thin  -->
     <link href='https://fonts.googleapis.com/css?family=Cuprum' rel='stylesheet'>
     <!-- Google font bold  -->
@@ -22,8 +22,7 @@
     <!-- css  -->
     <link rel="stylesheet" href="../assets/style.css">
 
-    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
 
     <title>Pet PAWtners</title>
 </head>
@@ -267,7 +266,7 @@
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                     <h2 class="modal-title"><strong>Best Match</strong></h2>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body" id="results-body">
                     <h2 id="match-name"></h2>
                     <h2 id="match-email"></h2>
                     <img id="match-img" src="" alt="">
@@ -286,6 +285,22 @@
         </div>
     </div>
 
+    
+
+    <footer>
+        <p>Copyright @Pet PAWtners 2020</p>
+        </div>
+    </footer>
+
+
+
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+    <!-- Jquery  -->
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"
+        integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="../assets/javaScript.js"></script>
     <!--Connect API route to page-->
     <script type="text/javascript">
         // Chosen CSS
@@ -305,9 +320,9 @@
             }
         };
 
-        for (var selector in config) {
-            $(selector).chosen(config[selector]);
-        }
+        // for (var selector in config) {
+        //     $(selector).chosen(config[selector]);
+        // }
 
         // Capture the form inputs
         $("#submit").on("click", function (event) {
@@ -355,46 +370,36 @@
                     const list = HTMLUListElement = document.createElement('ul');
 
                     //loop through the results
-                    for (let i = 0; i < array.length; i++) {
+                    for (let i = 0; i < data.length; i++) {
 
                         // grab a sitter element by index from the results array
-                        const sitter = array[i];
+                        const sitter = data[i];
                         // creates an "LI" element to put sitter inside
                         const li = HTMLLIElement = document.createElement('li');
                             //create the name, email, and image tags to put inside the li for each sitter we get back
+                            li.className = 'result-item';
                             li.innerHTML = `<h2 id="match-name-${i}">${sitter.name}</h2>` +
                                 `<h2 id="match-email-${i}">${sitter.email}</h2>` +
-                                `<img id="match-img-${i}" src="${sitter.photo}" alt=""><br />`;
+                                `<img id="match-img-${i}" src="${sitter.photo}" alt=""><br /><br /><hr />`;
 
                             //insert the list item into the list ul to build the list of sitters to display in the 
                             //modal
                             list.insertAdjacentElement('beforeend', li);
                     }
                     //Clear out the modal body to get ready for the next list.
-                    let modalBody = HTMLDivElement =  $('.modal-body');
+                    let modalBody = HTMLDivElement =  $('#results-body')[0];
                     modalBody.innerHTML = "";
                     //Add the list of sitters to the modal body
                     modalBody.insertAdjacentElement('afterbegin', list);
                     // Show the modal with the best match
-                    $("#results-modal").modal("toggle");
 
+                    $('#results-modal').modal('toggle');
                 });
             } else {
                 alert("Please fill out all fields before submitting!");
             }
         });
     </script>
-
-    <footer>
-        <p>Copyright @Pet PAWtners 2020</p>
-        </div>
-    </footer>
-
-
-
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="../assets/javaScript.js"></script>
 
 </body>
 

@@ -418,7 +418,9 @@ footer {
     clear: both;
 } 
 
-
+.result-item {
+    list-style: none;
+}
 
 
 @media screen and (min-width: 300px) and (max-width: 980px){

@@ -8,17 +8,17 @@
     <!-- Boostrap  -->
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    
+
     <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Google font thin  -->
     <link href='https://fonts.googleapis.com/css?family=Cuprum' rel='stylesheet'>
     <!-- Google font bold  -->
     <link href='https://fonts.googleapis.com/css?family=Carter One' rel='stylesheet'>
-
+    <link href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet">
     <!-- css  -->
     <link rel="stylesheet" href="../assets/style.css">
 
@@ -282,8 +282,9 @@
     <script src="https://code.jquery.com/jquery-3.5.0.min.js"
         integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
     <script src="../assets/javaScript.js"></script>
-    <!--Connect API route to page-->
+    <!-- Connect API route to page -->
     <script type="text/javascript">
         // Chosen CSS
         var config = {
@@ -347,17 +348,17 @@
                 $.post("/api/sitter", userData, function (data) {
 
                     // Grab the result from the AJAX post to display the list of possible matches.
+                    if (data.count > 0) {
+                        // First create a un ordered list element which we use to display the result in.
+                        const list = HTMLUListElement = document.createElement('ul');
 
-                    // First create a un ordered list element which we use to display the result in.
-                    const list = HTMLUListElement = document.createElement('ul');
+                        //loop through the results
+                        for (let i = 0; i < data.length; i++) {
 
-                    //loop through the results
-                    for (let i = 0; i < data.length; i++) {
-
-                        // grab a sitter element by index from the results array
-                        const sitter = data[i];
-                        // creates an "LI" element to put sitter inside
-                        const li = HTMLLIElement = document.createElement('li');
+                            // grab a sitter element by index from the results array
+                            const sitter = data[i];
+                            // creates an "LI" element to put sitter inside
+                            const li = HTMLLIElement = document.createElement('li');
                             //create the name, email, and image tags to put inside the li for each sitter we get back
                             li.className = 'result-item';
                             li.innerHTML = `<h2 id="match-name-${i}">${sitter.name}</h2>` +
@@ -367,18 +368,31 @@
                             //insert the list item into the list ul to build the list of sitters to display in the 
                             //modal
                             list.insertAdjacentElement('beforeend', li);
-                    }
-                    //Clear out the modal body to get ready for the next list.
-                    let modalBody = HTMLDivElement =  $('#results-body')[0];
-                    modalBody.innerHTML = "";
-                    //Add the list of sitters to the modal body
-                    modalBody.insertAdjacentElement('afterbegin', list);
-                    // Show the modal with the best match
+                        }
+                        //Clear out the modal body to get ready for the next list.
+                        let modalBody = HTMLDivElement = $('#results-body')[0];
+                        modalBody.innerHTML = "";
+                        //Add the list of sitters to the modal body
+                        modalBody.insertAdjacentElement('afterbegin', list);
+                        // Show the modal with the best match
 
-                    $('#results-modal').modal('toggle');
+                        $('#results-modal').modal('toggle');
+                    } else {
+                        toastr.options = {
+
+                            "positionClass": "toast-top-center"
+
+                        }
+                        toastr.warning('Oh dog poop!  There is no one in your area that matches your needs at this time.')
+                    }
                 });
+
+
             } else {
-                alert("Please fill out all fields before submitting!");
+                toastr.options = {
+                    "positionClass": "toast-top-center"
+                }
+                toastr.error("Please fill out all fields before submitting!");
             }
         });
     </script>

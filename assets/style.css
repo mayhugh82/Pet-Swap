@@ -422,6 +422,8 @@ footer {
     list-style: none;
 }
 
+.result-item > img{max-width: 200;}
+
 
 @media screen and (min-width: 300px) and (max-width: 980px){
 

@@ -255,20 +255,22 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h2 class="modal-title"><strong>Best Match</strong></h2>
+                    <h2 class="modal-title" id="modal-title"><strong> Your Matches</strong></h2>
                 </div>
+                <div class="modal-about">
+                    <p>Congrats! We found the perfect dog options for you to puppy-sit! Use the email address
+                        provided below to
+                        contact your favorite
+                        match!</p>
+                    <hr>
+                </div>
+
                 <div class="modal-body" id="results-body">
                     <h2 id="match-name"></h2>
                     <h2 id="match-email"></h2>
                     <img id="match-img" src="" alt="">
-                    <br>
-                    <br>
-                    <p>Congrats! We found the perfect dog for you to Puppy-sit! Use the email address provided to
-                        contact your
-                        match and make Fido's stay feel like home!</p>
-
-
                 </div>
+
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 </div>
@@ -348,7 +350,7 @@
                 $.post("/api/sitter", userData, function (data) {
 
                     // Grab the result from the AJAX post to display the list of possible matches.
-                    if (data.count > 0) {
+                    if (data.length > 0) {
                         // First create a un ordered list element which we use to display the result in.
                         const list = HTMLUListElement = document.createElement('ul');
 
@@ -361,9 +363,13 @@
                             const li = HTMLLIElement = document.createElement('li');
                             //create the name, email, and image tags to put inside the li for each sitter we get back
                             li.className = 'result-item';
-                            li.innerHTML = `<h2 id="match-name-${i}">${sitter.name}</h2>` +
-                                `<h2 id="match-email-${i}">${sitter.email}</h2>` +
+                            // li.innerHTML = `<h2 id="match-name-${i}">${sitter.name}</h2>` +
+                            //     `<h3 id="match-email-${i}">${sitter.email}</h3>` +
+                            //     `<img id="match-img-${i}" src="${sitter.photo}" alt=""><br /><br /><hr>`;
+                            li.innerHTML = `<h2> Name: </h2>` + `<h3 id="match-name-${i}">${sitter.name}</h3>` + `<h2> Email: </h2>` +
+                                `<h3 id="match-email-${i}">${sitter.email}</h3>` +
                                 `<img id="match-img-${i}" src="${sitter.photo}" alt=""><br /><br /><hr>`;
+
 
                             //insert the list item into the list ul to build the list of sitters to display in the 
                             //modal

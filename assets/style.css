@@ -418,11 +418,27 @@ footer {
     clear: both;
 } 
 
+
+/* Results Modal  */
 .result-item {
     list-style: none;
 }
 
-.result-item > img{max-width: 200;}
+.result-item > img{
+    max-width: 200px;
+    max-height: 200px;
+}
+
+#modal-title{
+    width: 100%;
+    padding-left: 15px;
+    /* background-color: aquamarine; */
+}
+.modal-about{
+    padding-left: 40px;
+    padding-right: 25px;
+    padding-top: 10px
+}
 
 
 @media screen and (min-width: 300px) and (max-width: 980px){

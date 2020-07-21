@@ -5,8 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "heroku-postbuild": "node 20200720004828-owners.js && node 20200720010012-sitters.js"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -20,8 +19,6 @@
   },
   "homepage": "https://github.com/DanaNobile/Pet-Swap#readme",
   "dependencies": {
-    "2": "^3.0.0",
-    "debug": "^4.1.1",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "mysql2": "^2.1.0",

@@ -36,6 +36,40 @@ require("./routes/htmlRoutes")(app);
 // The below code effectively "starts" our server
 // ==============================================================================
 
-app.listen(PORT, function () {
-  console.log("Server listening on: http://localhost:" + PORT);
+db.sequelize.sync().then(function () {
+  db.Owners.create(
+    {
+      name: "Diana",
+      photo: "",
+      city: "Kansas",
+      state: "KS",
+      email: "diana@earthlink.com",
+      duration: "3",
+      quantity: 3,
+      size: "3",
+      temperament: "3",
+
+    },
+  ).then();
+
+
+  db.Sitters.create(
+    {
+      name: "Diana",
+      photo: "",
+      city: "Kansas",
+      state: "KS",
+      email: "diana@earthlink.com",
+      duration: "3",
+      quantity: 3,
+      size: "3",
+      temperament: "3",
+
+    },
+  ).then();
+
+
+  app.listen(PORT, function () {
+    console.log("App listening on PORT " + PORT);
+  });
 });

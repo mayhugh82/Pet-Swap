@@ -4,7 +4,7 @@
 // ==============================================================================
 
 var express = require("express");
-
+var db = require("./models")
 // ==============================================================================
 // EXPRESS CONFIGURATION
 // This sets up the basic properties for our express server
@@ -37,7 +37,7 @@ require("./routes/htmlRoutes")(app);
 // ==============================================================================
 
 db.sequelize.sync().then(function () {
-  db.Owners.create(
+  db.Owner.create(
     {
       name: "Diana",
       photo: "",
@@ -53,7 +53,7 @@ db.sequelize.sync().then(function () {
   ).then();
 
 
-  db.Sitters.create(
+  db.Sitter.create(
     {
       name: "Diana",
       photo: "",
@@ -69,9 +69,8 @@ db.sequelize.sync().then(function () {
   ).then();
 
 
-  db.sequelize.sync().then(function () {
-    app.listen(PORT, function () {
-      console.log("App listening on PORT " + PORT);
-    });
+  app.listen(PORT, function () {
+    console.log("App listening on PORT " + PORT);
   });
 });
+

@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "build": "node 20200720004828-owners.js && node 20200720010012-sitters.js"
+    "heroku-postbuild": "node 20200720004828-owners.js && node 20200720010012-sitters.js"
   },
   "repository": {
     "type": "git",

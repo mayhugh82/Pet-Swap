@@ -38,23 +38,37 @@ require("./routes/htmlRoutes")(app);
 
 db.sequelize.sync().then(function () {
   db.Owner.create({
-    name: "Diana",
-    photo: "",
-    city: "Kansas",
-    state: "KS",
-    email: "diana@earthlink.com",
+    name: "Joshua Balao",
+    photo:
+      Bandit.jpg,
+    city: "Tampa",
+    state: "FL",
+    email: "JB@awesomecoder.com",
+    duration: "2",
+    quantity: 1,
+    size: "3",
+    temperament: "1",
+  }).then();
+
+  db.Sitter.create({
+    name: "Jim",
+    photo: jimcharlie.png,
+    city: "Boston",
+    state: "MA",
+    email: "jim27@kingofhiscastle.com",
     duration: "3",
     quantity: 3,
     size: "3",
     temperament: "3",
-  }).then();
-
+  },
+  ).then();
+  
   db.Sitter.create({
-    name: "Diana",
-    photo: "",
-    city: "Kansas",
-    state: "KS",
-    email: "diana@earthlink.com",
+    name: "Jim",
+    photo: jimcharlie.png,
+    city: "Boston",
+    state: "MA",
+    email: "jim27@kingofhiscastle.com",
     duration: "3",
     quantity: 3,
     size: "3",

@@ -39,8 +39,7 @@ require("./routes/htmlRoutes")(app);
 db.sequelize.sync().then(function () {
   db.Owner.create({
     name: "Joshua Balao",
-    photo:
-      Bandit.jpg,
+    photo: "./assets/images/Bandit.jpg",
     city: "Tampa",
     state: "FL",
     email: "JB@awesomecoder.com",
@@ -52,7 +51,7 @@ db.sequelize.sync().then(function () {
 
   db.Sitter.create({
     name: "Jim",
-    photo: jimcharlie.png,
+    photo: "./assets/images/jimcharlie.png",
     city: "Boston",
     state: "MA",
     email: "jim27@kingofhiscastle.com",
@@ -65,7 +64,7 @@ db.sequelize.sync().then(function () {
   
   db.Sitter.create({
     name: "Jim",
-    photo: jimcharlie.png,
+    photo: "",
     city: "Boston",
     state: "MA",
     email: "jim27@kingofhiscastle.com",

@@ -42,7 +42,31 @@ db.sequelize.sync().then(function () {
     photo: "./assets/images/Bandit.jpg",
     city: "Tampa",
     state: "FL",
-    email: "JB@awesomecoder.com",
+    email: "JB@AwesomeCoder.com",
+    duration: "2",
+    quantity: 1,
+    size: "3",
+    temperament: "1",
+  }).then();
+
+  db.Owner.create({
+    name: "Sunitha Pillai",
+    photo: "./assets/images/SunithasDoggie.jpg",
+    city: "Tampa",
+    state: "FL",
+    email: "SunithaStyles@CodingLady.com",
+    duration: "2",
+    quantity: 1,
+    size: "3",
+    temperament: "1",
+  }).then();
+
+  db.Owner.create({
+    name: "Ashley Chica",
+    photo: "./assets/images/AshleysDoggie.jpg",
+    city: "Tampa",
+    state: "FL",
+    email: "Ashley@BossCoder.com",
     duration: "2",
     quantity: 1,
     size: "3",
@@ -61,7 +85,7 @@ db.sequelize.sync().then(function () {
     temperament: "3",
   },
   ).then();
-  
+
   db.Sitter.create({
     name: "Jim",
     photo: "",

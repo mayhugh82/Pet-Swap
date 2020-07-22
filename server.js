@@ -37,40 +37,33 @@ require("./routes/htmlRoutes")(app);
 // ==============================================================================
 
 db.sequelize.sync().then(function () {
-  db.Owner.create(
-    {
-      name: "Diana",
-      photo: "",
-      city: "Kansas",
-      state: "KS",
-      email: "diana@earthlink.com",
-      duration: "3",
-      quantity: 3,
-      size: "3",
-      temperament: "3",
+  db.Owner.create({
+    name: "Diana",
+    photo: "",
+    city: "Kansas",
+    state: "KS",
+    email: "diana@earthlink.com",
+    duration: "3",
+    quantity: 3,
+    size: "3",
+    temperament: "3",
+  }).then();
 
-    },
-  ).then();
+  db.Sitter.create({
+    name: "Diana",
+    photo: "",
+    city: "Kansas",
+    state: "KS",
+    email: "diana@earthlink.com",
+    duration: "3",
+    quantity: 3,
+    size: "3",
+    temperament: "3",
+  }).then();
 
-
-  db.Sitter.create(
-    {
-      name: "Diana",
-      photo: "",
-      city: "Kansas",
-      state: "KS",
-      email: "diana@earthlink.com",
-      duration: "3",
-      quantity: 3,
-      size: "3",
-      temperament: "3",
-
-    },
-  ).then();
-
-
-  app.listen(PORT, function () {
-    console.log("App listening on PORT " + PORT);
+  db.sequelize.sync().then(function () {
+    app.listen(PORT, function () {
+      console.log("App listening on PORT " + PORT);
+    });
   });
 });
-

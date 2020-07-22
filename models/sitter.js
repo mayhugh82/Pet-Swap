@@ -13,20 +13,25 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
     }
   };
-  Sitter.init({
-    id: {type: DataTypes.INTEGER, primaryKey: true},
-    name: DataTypes.STRING,
-    photo: DataTypes.STRING,
-    city: DataTypes.STRING,
-    state: DataTypes.STRING,
-    email: DataTypes.STRING,
-    duration: DataTypes.STRING,
-    quantity: DataTypes.INTEGER,
-    size: DataTypes.STRING,
-    temperament: DataTypes.STRING
-  }, {
-    sequelize,
-    modelName: 'Sitter',
-  });
+  Sitter.init(
+    {
+      id: { type: DataTypes.INTEGER,
+        primaryKey: true,
+        autoIncrement: true },
+      name: DataTypes.STRING,
+      photo: DataTypes.STRING,
+      city: DataTypes.STRING,
+      state: DataTypes.STRING,
+      email: DataTypes.STRING,
+      duration: DataTypes.STRING,
+      quantity: DataTypes.INTEGER,
+      size: DataTypes.STRING,
+      temperament: DataTypes.STRING,
+    },
+    {
+      sequelize,
+      modelName: "Sitter",
+    }
+  );
   return Sitter;
 };

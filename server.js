@@ -87,11 +87,34 @@ db.sequelize.sync().then(function () {
   ).then();
 
   db.Sitter.create({
-    name: "Jim",
-    photo: "",
+    name: "Pete",
+    photo: "./assets/images/Pete.jpg",
     city: "Boston",
     state: "MA",
-    email: "jim27@kingofhiscastle.com",
+    email: "pete@IMovedToBostonToBeNearJim.com",
+    duration: "3",
+    quantity: 3,
+    size: "3",
+    temperament: "3",
+  }).then();
+
+  db.Sitter.create({
+    name: "Kyle",
+    photo: "./assets/images/Kyle.jpg",
+    city: "Boston",
+    state: "MA",
+    email: "Kyle@TheMostChillCoder.com",
+    duration: "3",
+    quantity: 3,
+    size: "3",
+    temperament: "3",
+  }).then();
+  db.Sitter.create({
+    name: "Curtis",
+    photo: "./assets/images/Curtis.jpg",
+    city: "Boston",
+    state: "MA",
+    email: "Curtis@WhosHairIsThat.com",
     duration: "3",
     quantity: 3,
     size: "3",

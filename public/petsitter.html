@@ -5,8 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Jquery  -->
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"
+        integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+
     <!-- Boostrap  -->
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -273,12 +276,15 @@
         </div>
     </footer>
 
-    <!-- Jquery  -->
-    <script src="https://code.jquery.com/jquery-3.5.0.min.js"
-        integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+    
+     <!-- Jquery  -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
     <script src="../assets/javaScript.js"></script>
+
+    <!-- bootstrap -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
     <!-- Connect API route to page -->
     <script type="text/javascript">
         // Chosen CSS
@@ -356,9 +362,6 @@
                             const li = HTMLLIElement = document.createElement('li');
                             //create the name, email, and image tags to put inside the li for each sitter we get back
                             li.className = 'result-item';
-                            // li.innerHTML = `<h2 id="match-name-${i}">${sitter.name}</h2>` +
-                            //     `<h3 id="match-email-${i}">${sitter.email}</h3>` +
-                            //     `<img id="match-img-${i}" src="${sitter.photo}" alt=""><br /><br /><hr>`;
                             li.innerHTML = `<h2> Name: </h2>` + `<h3 id="match-name-${i}">${sitter.name}</h3>` + `<h2> Email: </h2>` +
                                 `<h3 id="match-email-${i}">${sitter.email}</h3>` +
                                 `<img id="match-img-${i}" src="${sitter.photo}" alt=""><br /><br /><hr>`;

@@ -5,28 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-     <!-- Jquery  -->
+    <!-- Jquery  -->
     <script src="https://code.jquery.com/jquery-3.5.0.min.js"
         integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
 
+    <!-- Google Font Thin  -->
+    <link href='https://fonts.googleapis.com/css?family=Cuprum' rel='stylesheet'>
+    <!-- Google Font Bold  -->
+    <link href='https://fonts.googleapis.com/css?family=Carter One' rel='stylesheet'>
     <!-- Boostrap  -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
-    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- Google font thin  -->
-    <link href='https://fonts.googleapis.com/css?family=Cuprum' rel='stylesheet'>
-    <!-- Google font bold  -->
-    <link href='https://fonts.googleapis.com/css?family=Carter One' rel='stylesheet'>
+    <!-- Toast  -->
     <link href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet">
-
-    <!-- css  -->
+    <!-- CSS  -->
     <link rel="stylesheet" href="../assets/style.css">
-
-
+    <!-- Hamburger Menu -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <title>Pet PAWtners</title>
 </head>
@@ -72,21 +68,16 @@
         <!-- Hero Text  -->
         <div class="container-intro">
             <div class="hero-text">
-
                 <div class="row">
                     <div class="col-md-12">
                         <h3>Start Below</h3>
                     </div>
                 </div>
-
                 <div class="row">
                     <div class="col-md-12">
-
-
                         <h1>Pet Owner Questions</h1>
                     </div>
                 </div>
-
                 <div class="row">
                     <div class="col-md-12">
                         <h2>Tell us more about your pet by completing the form. <br>We'll use this info to connect your
@@ -98,18 +89,13 @@
         </div>
 
     </div>
-    </div>
-    </div>
-
-
-
-
+    <!-- </div>
+    </div> -->
     </a>
 
-    <!-- <hr> -->
+    <!-- Survey Questions  -->
     <div class="container survey">
         <img src="../assets/images/horizontal-prints.png" id="paw-prints" alt="paw-print">
-
 
         <div class="survey-box">
             <h3>Name (Required):</h3>
@@ -118,12 +104,10 @@
             <h3>Link to a Photo Image of your Dog (Required):</h3>
             <input type="text" id="photo" class="form-control" required>
 
-
             <!-- Question 1 -->
             <h3>City:</h3>
-
-
             <input type="text" id="city" class="form-control" name="city">
+
             <!-- Question 2 -->
             <h3>State:</h3>
             <select class="chosen-select form-control" id="state">
@@ -186,12 +170,9 @@
                 <option value="	WY	"> WY </option>
             </select>
 
-
             <!-- Question 3 -->
             <h3>Email:</h3>
             <input type="email" id="email" name="email" class="form-control">
-
-
 
             <!-- Question 4 -->
             <h3>How long will you need a sitter?</h3>
@@ -202,7 +183,6 @@
                 <option value="3">More than 5 Days</option>
             </select>
 
-
             <!-- Question 5 -->
             <h3>How Many Dogs?</h3>
             <select class="chosen-select form-control" id="q5">
@@ -211,7 +191,6 @@
                 <option value="2">2</option>
                 <option value="3">3</option>
             </select>
-
 
             <!-- Question 6 -->
             <h3>What is your dog's size?</h3>
@@ -223,7 +202,6 @@
                 </option>
             </select>
 
-
             <!-- Question 7 -->
             <h3>What kind of temperament does your dog have?</h3>
             <select class="chosen-select form-control" id="q7">
@@ -231,19 +209,13 @@
                 <option value="1">Playful & Active</option>
                 <option value="2">Calm & Lazy</option>
                 <option value="3">Timid & Shy</option>
-
             </select>
-
-
             <br>
             <br>
-
             <!-- Submit Button -->
             <button type="submit" class="btn" id="submit"><i class="fa fa-check-circle" aria-hidden="true"></i>
                 Submit</button>
         </div>
-
-
     </div>
 
     <!-- Modal -->
@@ -264,38 +236,33 @@
                     <hr>
                 </div>
 
-
                 <div class="modal-body" id="results-body">
                     <h2 id="match-name"></h2>
                     <h2 id="match-email"></h2>
                     <img id="match-img" src="" alt="">
-
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 </div>
             </div>
-
         </div>
     </div>
 
-
-
+    <!-- Footer  -->
     <footer>
         <p>Copyright @Pet PAWtners 2020</p>
         </div>
     </footer>
 
 
-
-
-
     <!-- Jquery  -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
     <script src="../assets/javaScript.js"></script>
-    <!-- bootstrap -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- Bootstrap -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
 
     <!--Connect API route to page-->
     <script type="text/javascript">
@@ -316,7 +283,6 @@
             }
         };
 
-
         // Capture the form inputs
         $("#submit").on("click", function (event) {
             event.preventDefault();
@@ -331,7 +297,6 @@
                 });
 
                 $(".chosen-select").each(function () {
-
                     if ($(this).val() === "") {
                         isValid = false;
                     }
@@ -356,7 +321,6 @@
 
                 // AJAX post the data to the owner API.
                 $.post("/api/owner", userData, function (data) {
-
                     // Grab the result from the AJAX post to display the list of possible matches.
                     if (data.length > 0) {
                         // First create a un ordered list element which we use to display the result in.
@@ -374,7 +338,6 @@
                             li.innerHTML = `<h2> Name: </h2>` + `<h3 id="match-name-${i}">${sitter.name}</h3>` + `<h2> Email: </h2>` +
                                 `<h3 id="match-email-${i}">${sitter.email}</h3>` +
                                 `<img id="match-img-${i}" src="${sitter.photo}" alt=""><br /><br /><hr>`;
-
                             //insert the list item into the list ul to build the list of sitters to display in the 
                             //modal
                             list.insertAdjacentElement('beforeend', li);
@@ -402,7 +365,6 @@
             }
         });
     </script>
-
 </body>
 
 </html>

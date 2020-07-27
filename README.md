@@ -5,7 +5,7 @@ An app used to connect with a pet sitter in your area!
 Pet-Pawtners is an application that helps dog owners meet a sitter that can handle your dog's character traits! As for sitters, this app  allows them to search for a dog or dogs that they can manage to care for based on their experience. The whole point of this application is to get your dog away from being boarded and they go to a home with a sitter who cares! 
 ![Home Page](/assets/images/main-site.gif)
 
-The web application is deployed on heroku: https://pet-pawtners.herokuapp.com/. 
+The web application is deployed on heroku: https://pet-paw-tners.herokuapp.com/. 
 
 The way this website works is by taking the user information that is input by the owner of the dog. The information asked for are name, photo link of dog, city, state, email, duration of stay, size of the dog, number of dogs, and lastly the dog's characteristics. It then stores that information in the database, then finding a pet sitter matches in the sitter database and returning those matches to the screen. 
 
